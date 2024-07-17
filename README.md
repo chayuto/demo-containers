@@ -1,5 +1,5 @@
-# demo-containers
- Demo container for testing and instrumentation
+# Demo Containers
+Collection of demo container/use-case for testing and instrumentation
 
 
 ## TCP Echo Server and Client
