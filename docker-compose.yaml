@@ -16,4 +16,4 @@ services:
       - echo_server
     environment:
       - TCP_PAYLOAD_SIZE=1024000
-      - INTERVAL_SEC=5
+      - INTERVAL_SEC=1

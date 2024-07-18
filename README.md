@@ -33,7 +33,7 @@ This directory contains the client implementation.
 
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 Environment Variables
