@@ -63,3 +63,19 @@ Sent 1024 bytes
 Received 1024 bytes
 ...
 ```
+
+
+## UDP test
+This project contains a simple UDP Server and Client. The client sends random bytes of a specified size to the server, which logs them with timestamps.
+
+├── udp_server
+│   ├── Dockerfile
+│   └── udp_server.py
+├── udp_client
+│   ├── Dockerfile
+│   └── udp_client.py
+└── docker-compose-udp.yml
+
+```
+docker compose -f docker-compose-udp.yaml up --build
+```
