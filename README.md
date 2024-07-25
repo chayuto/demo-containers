@@ -68,6 +68,7 @@ Received 1024 bytes
 ## UDP test
 This project contains a simple UDP Server and Client. The client sends random bytes of a specified size to the server, which logs them with timestamps.
 
+```
 ├── udp_server
 │   ├── Dockerfile
 │   └── udp_server.py
@@ -75,6 +76,7 @@ This project contains a simple UDP Server and Client. The client sends random by
 │   ├── Dockerfile
 │   └── udp_client.py
 └── docker-compose-udp.yml
+```
 
 ```
 docker compose -f docker-compose-udp.yaml up --build
@@ -82,17 +84,17 @@ docker compose -f docker-compose-udp.yaml up --build
 
 ## Flask POST file Server 
 
-```
+```bash
 sudo docker compose -f flask_post_server/docker-compose.yaml up --build
 ```
 
 
-```
+```bash
 curl -X POST http://localhost:5000/receive -F "file=@flask_post_server/test_file.txt"
 ```
 
 example response:
-```
+```log
 flask_server-1  | Received a POST request
 flask_server-1  | Processing file: file
 flask_server-1  | Request Metadata:
