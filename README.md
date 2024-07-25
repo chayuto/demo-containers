@@ -79,3 +79,33 @@ This project contains a simple UDP Server and Client. The client sends random by
 ```
 docker compose -f docker-compose-udp.yaml up --build
 ```
+
+## Flask POST file Server 
+
+```
+sudo docker compose -f flask_post_server/docker-compose.yaml up --build
+```
+
+
+```
+curl -X POST http://localhost:5000/receive -F "file=@flask_post_server/test_file.txt"
+```
+
+example response:
+```
+flask_server-1  | Received a POST request
+flask_server-1  | Processing file: file
+flask_server-1  | Request Metadata:
+flask_server-1  | remote_addr: 192.168.65.1
+flask_server-1  | method: POST
+flask_server-1  | url: http://localhost:5000/receive
+flask_server-1  | base_url: http://localhost:5000/receive
+flask_server-1  | url_root: http://localhost:5000/
+flask_server-1  | headers: {'Host': 'localhost:5000', 'User-Agent': 'curl/8.6.0', 'Accept': '*/*', 'Content-Length': '209', 'Content-Type': 'multipart/form-data; boundary=------------------------PRFY7fg7KRYeroulwPwXgP'}
+flask_server-1  | form: {}
+flask_server-1  | args: {}
+flask_server-1  | files: {'file': {'length': 6, 'content': b'Potato'}}
+flask_server-1  | File: file, Length: 6
+flask_server-1  | Content: b'Potato'
+flask_server-1  | 192.168.65.1 - - [25/Jul/2024 02:11:02] "POST /receive HTTP/1.1" 200 -
+```
