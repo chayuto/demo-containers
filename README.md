@@ -111,3 +111,10 @@ flask_server-1  | File: file, Length: 6
 flask_server-1  | Content: b'Potato'
 flask_server-1  | 192.168.65.1 - - [25/Jul/2024 02:11:02] "POST /receive HTTP/1.1" 200 -
 ```
+
+## Simple Rails App
+
+[README](simple-rails-app/README.md)
+
+[Dev sniplet](simple-rails-app/dev_README.md)
+
