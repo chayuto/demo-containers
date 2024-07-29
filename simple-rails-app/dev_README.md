@@ -1,8 +1,12 @@
 sudo docker compose up --build
 
 
-docker compose exec web rails console
+docker compose exec web ./bin/rails console
 
+```
+Loading production environment (Rails 7.1.3.4)
+irb(main):001> 
+```
 
 Build snipplet 
 ```
