@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # THIS IS BAD EXAMPLE - DO NOT USE
-  config.web_console.development_only = false
+  # config.web_console.development_only = false
 
   # Code is not reloaded between requests.
   config.enable_reloading = false
