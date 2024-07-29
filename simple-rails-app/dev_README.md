@@ -1,3 +1,5 @@
+# Dev Notes
+
 sudo docker compose up --build
 
 
