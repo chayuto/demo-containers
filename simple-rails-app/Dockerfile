@@ -48,13 +48,11 @@ COPY --from=build /usr/local/bundle /usr/local/bundle
 COPY --from=build /rails /rails
 COPY --from=build /rails/public/assets /rails/public/assets
 
-# Ensure proper permissions for relevant directories
-RUN mkdir -p /rails/tmp/cache /rails/log /rails/storage && \
+# Create the rails user and set permissions for runtime directories
+RUN useradd -m rails --create-home --shell /bin/bash && \
+    mkdir -p /rails/tmp/cache /rails/log /rails/storage && \
     chown -R rails:rails /rails
 
-# Run and own only the runtime files as a non-root user for security
-RUN useradd rails --create-home --shell /bin/bash && \
-    chown -R rails:rails db log storage tmp public/assets
 USER rails:rails
 
 # Entrypoint prepares the database.
