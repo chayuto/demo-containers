@@ -6,6 +6,8 @@ Collection of demo container/use-case for testing and instrumentation
 
 This project contains a simple TCP Echo Server and Client implemented in Python, running in Docker containers and managed by Docker Compose. The client sends random bytes of a specified size to the server, which echoes them back.
 
+also availble in kubernetes flavour [here](kubernetes.md)
+
 ```
 ├── echo_server
 │ ├── Dockerfile
