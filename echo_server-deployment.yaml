@@ -15,5 +15,6 @@ spec:
       containers:
       - name: echo-server
         image: echo_server_image:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
