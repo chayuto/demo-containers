@@ -6,6 +6,8 @@ import random
 def start_client(server_host='echo_server', server_port=5000):
     tcp_payload_size = int(os.getenv('TCP_PAYLOAD_SIZE', '1024'))
     interval_sec = int(os.getenv('INTERVAL_SEC', '5'))
+    # Check if TCP_HOSTNAME environment variable is set and use it if available
+    server_host = os.getenv('TCP_HOSTNAME', server_host)
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client_socket.connect((server_host, server_port))

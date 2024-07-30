@@ -21,3 +21,5 @@ spec:
           value: "1024000"
         - name: INTERVAL_SEC
           value: "1"
+        - name: TCP_HOSTNAME
+          value: "echo-server"
