@@ -14,3 +14,18 @@ NAME                          READY   STATUS    RESTARTS      AGE
 client-5fcc7fc88c-ljwqh       1/1     Running   1 (6s ago)    7s
 echo-server-bfc9d64bb-5xcgl   1/1     Running   1 (74s ago)   17m
 ```
+
+`kubectl logs client-5fcc7fc88c-ljwqh`
+
+```
+Sent 1024000 bytes
+Received 1024000 bytes
+Sent 1024000 bytes
+Received 1024000 bytes
+Sent 1024000 bytes
+Received 1024000 bytes
+Sent 1024000 bytes
+Received 1024000 bytes
+Sent 1024000 bytes
+Received 1024000 bytes
+```
